@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+/* main */
+main{
+    max-width: 1440px;
+    margin: auto;
+}
+
+/* grid-container */
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'logo picture'
+    'info picture';
+    grid-auto-columns: 1fr;
+    gap: 2rem;
+}
+.logo{
+    grid-area: logo;
+
+}
+.logo > img{
+    margin: 4rem;
+}
+.infos{
+    grid-area: info;
+    
+}
+.infos > h2{
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    padding-left: 4rem;
+    color: hsl(0, 36%, 70%);
+}
+.infos > h1{
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    word-spacing: 3rem;
+    line-height: 4.5rem;
+    padding-left: 4rem;
+    color: hsl(0, 6%, 24%);
+}
+.infos > p{
+    line-height: 1.5rem;
+    padding-right: 10rem;
+    padding-left: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: hsl(0, 36%, 70%);
+}
+#mail{
+    width: 63%;
+    margin-left: 4rem;
+    height: 4rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    font-size: .95rem;
+    padding-left: 2rem;
+    outline: 1px solid hsla(0, 6%, 24%, 0.336);
+    border: none;
+}
+#mail:focus{
+    outline: 1px solid hsl(0, 93%, 68%);
+}
+
+.infos > label{
+    
+    
+    position: relative;
+    right: 16%;
+    top: 1%;
+}
+.infos > label > button{
+    border-radius: 2rem;
+    background: linear-gradient(hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    height: 4.5rem;
+    width: 17%;
+    border: none;
+    position: relative;
+    
+}
+
+.infos > label > button:hover{
+    cursor: pointer;
+    background: linear-gradient(hsl(0, 57%, 87%), hsl(0, 56%, 83%));
+       
+}
+.valid-email{
+    color: hsl(0, 93%, 68%);
+    font-size: 1rem;
+    margin-left: 6rem;
+    /* margin-top: 0.56rem; */
+    padding: 1rem 0rem;
+    position: absolute;
+    display: none;
+}
+#error{
+    position: absolute;
+    right: 108%;
+    display: none;
+}
+
+.pics{
+    grid-area: picture;
+}
+#img-hero{
+    width: 34rem;
+}
+
+@media screen and (max-width:500px) {
+    .grid-container{
+        grid-template-areas: 
+        'logo'
+        'picture'
+        'info';
+    }
+    .logo > img {
+        margin: 2rem;
+    }
+    #img-hero{
+        width: 100%;
+    }
+    .infos > h1 {
+        font-size: 2.5rem;
+        letter-spacing: .9rem;
+        word-spacing: 3rem;
+        line-height: 2.5rem;
+        padding-left: 0rem;
+        text-align: center;
+    }
+    .infos > h2 {
+        font-size: 3rem;
+        padding-left: 0rem;
+        text-align: center;
+    }
+    .infos > p{
+        text-align: center;
+        padding: 0rem 1rem;
+    }
+    .infos > label > button {
+        border-radius: 2rem;
+        background: linear-gradient(hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        height: 3.5rem;
+        width: 19%;
+        border: none;
+        position: relative;
+        margin-left: -4rem;
+        left: 19%;
+    }
+    #mail {
+        width: 85%;
+        margin-left: 1rem;
+        height: 3rem;
+        margin-top: 1rem;
+        border-radius: 2rem;
+        font-size: .95rem;
+        padding-left: 2rem;
+        outline: 1px solid hsla(0, 6%, 24%, 0.336);
+        border: none;
+    }
+    .valid-email{
+        margin-top: 0rem;
+    }
+}
+@media screen and (max-width:345px) {
+    .valid-email{
+        margin-left: 3rem;
+    }
+}
